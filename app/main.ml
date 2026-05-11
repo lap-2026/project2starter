@@ -124,7 +124,7 @@ let parse_file filename =
 let scale  = 5 (* DO NOT CHANGE *)
 let canvas = 100 * scale (* DO NOT CHANGE *)
 
-(* This function implements the drawing primitives. DO NOT CHANGE *)
+(* This function implements the drawing primitives. CHANGE ONLY if... see end *)
 let draw sv t = function
   | Square (c, x, y, w, h) ->
       let corners = [| screen sv t x y; screen sv t (x+w) y;
@@ -158,6 +158,7 @@ let draw sv t = function
       set_font (Printf.sprintf "-*-times-medium-r-normal--%d-*-*-*-*-*-iso8859-1" size);
       moveto px py;
       draw_string txt
+  (* You can add an assert false in a final case if you extend the existing type for instructions. *)
 
 (* ── Interpreter ───────EXTEND WITH MORE CASES ─────────────────────────────────────── *)
 
